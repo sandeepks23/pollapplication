@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+{%extends 'homepage.html'%}
+
+{%block body_block%}
+<div class="container">
+    <div class="row">
+        <div class="col-4"></div>
+        <div class="col-4">
+            <div style="text-align:center;">
+                <h1>Poll Results</h1>
+            </div>
+            Qn. {{poll.question}} <br>
+
+            A: {{poll.option_a}}({{poll.a_count}} users voted for this.) <br>
+            B: {{poll.option_b}}({{poll.b_count}} users voted for this.) <br>
+            C: {{poll.option_c}}({{poll.c_count}} users voted for this.) <br>
+
+<!--            <div style="text-align:center;">-->
+<!--                <a class="btn btn-primary" href="{%url 'home' %}">Continue</a>-->
+<!--            </div>-->
+        </div>
+        <div class="col-4"></div>
+    </div>
+</div>
+
+{% endblock %}

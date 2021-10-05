@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+{%extends 'homepage.html'%}
+
+{%block body_block%}
+<div class="container">
+    <div class="row">
+        <div class="col-4"></div>
+        <div class="col-4">
+            <form action="" method="post">
+                {%csrf_token%}
+<p style="padding-top:20px">Qn. {{poll.question}}</p>
+
+                <p><label><input type="radio" name="options" value="option_a">A: {{poll.option_a}}</label></p>
+                <p><label><input type="radio" name="options" value="option_b">B: {{poll.option_b}}</label></p>
+                <p><label><input type="radio" name="options" value="option_c">C: {{poll.option_c}}</label>
+
+                    <p><input type="submit" value="Submit"></p>
+
+
+            </form>
+        </div>
+        <div class="col-4"></div>
+    </div>
+</div>
+
+
+{% endblock %}
